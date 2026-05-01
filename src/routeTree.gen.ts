@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as EscritorRouteImport } from './routes/escritor'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as AtuacaoRouteImport } from './routes/atuacao'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EscritorRoute = EscritorRouteImport.update({
+  id: '/escritor',
+  path: '/escritor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtuacaoRoute = AtuacaoRouteImport.update({
+  id: '/atuacao',
+  path: '/atuacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/escritor': typeof EscritorRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/escritor': typeof EscritorRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/escritor': typeof EscritorRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
+  id: '__root__' | '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtuacaoRoute: typeof AtuacaoRoute
+  ContatoRoute: typeof ContatoRoute
+  EscritorRoute: typeof EscritorRoute
+  SobreRoute: typeof SobreRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/escritor': {
+      id: '/escritor'
+      path: '/escritor'
+      fullPath: '/escritor'
+      preLoaderRoute: typeof EscritorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atuacao': {
+      id: '/atuacao'
+      path: '/atuacao'
+      fullPath: '/atuacao'
+      preLoaderRoute: typeof AtuacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,16 +121,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtuacaoRoute: AtuacaoRoute,
+  ContatoRoute: ContatoRoute,
+  EscritorRoute: EscritorRoute,
+  SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

@@ -1,20 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Brain, GraduationCap, Scale, Compass } from "lucide-react";
-import portrait from "@/assets/erichson-portrait.jpg";
+import portrait from "@/assets/Erikson-portrait.png";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Erichson Bunder — Psicólogo, Escritor e Mentor" },
+      { title: "Erikson Wander — Psicólogo, Escritor e Mentor" },
       {
         name: "description",
         content:
-          "Site oficial de Erichson Bunder. Psicólogo clínico, escritor, mentor, professor e perito. Escuta atenta, prática ética e cuidado humano.",
+          "Site oficial de Erikson Wander. Psicólogo clínico, escritor, mentor, professor e perito. Escuta atenta, prática ética e cuidado humano.",
       },
-      { property: "og:title", content: "Erichson Bunder — Psicólogo, Escritor e Mentor" },
+      { property: "og:title", content: "Erikson Wander — Psicólogo, Escritor e Mentor" },
       {
         property: "og:description",
         content: "Psicólogo, escritor, mentor, professor e perito.",
@@ -49,7 +49,7 @@ function Index() {
               transition={{ duration: 0.6 }}
               className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
             >
-              Erichson Bunder · CRP
+              Erikson Wander · CRP: 04/57656
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
@@ -99,7 +99,7 @@ function Index() {
             <div className="absolute -inset-1 rounded-[2rem] border border-ink/10 rotate-1" />
             <img
               src={portrait}
-              alt="Retrato de Erichson Bunder"
+              alt="Retrato de Erikson Wander"
               width={1024}
               height={1280}
               className="relative rounded-[2rem] object-cover w-full aspect-[4/5] shadow-2xl shadow-ink/20"
@@ -182,7 +182,7 @@ function Index() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-8 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-              — Erichson Bunder
+              — Erikson Wander
             </p>
           </Reveal>
         </div>

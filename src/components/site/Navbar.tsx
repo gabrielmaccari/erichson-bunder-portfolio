@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.jpg";
 
 const links = [
   { to: "/", label: "Início" },
   { to: "/sobre", label: "Sobre" },
   { to: "/atuacao", label: "Atuação" },
-  { to: "/escritor", label: "Escritor" },
+  { to: "/escritor", label: "Livros" },
   { to: "/contato", label: "Contato" },
 ] as const;
 
@@ -30,9 +31,16 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
-        <Link to="/" className="group flex items-baseline gap-2">
-          <span className="font-display text-xl tracking-tight text-ink">Erichson</span>
-          <span className="font-display italic text-sm text-muted-foreground">Bunder</span>
+        <Link to="/" className="group flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-12 w-12 md:h-14 md:w-14 rounded-md object-cover"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-xl tracking-tight text-ink">Dr. Erikson</span>
+            <span className="font-display italic text-sm text-muted-foreground">Wander</span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

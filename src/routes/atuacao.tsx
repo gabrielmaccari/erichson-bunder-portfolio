@@ -6,9 +6,9 @@ import { Brain, BookOpen, Compass, GraduationCap, Scale, ArrowRight } from "luci
 export const Route = createFileRoute("/atuacao")({
   head: () => ({
     meta: [
-      { title: "Atuação — Erichson Bunder" },
+      { title: "Atuação — Erikson Wander" },
       { name: "description", content: "Áreas de atuação: clínica, mentoria, docência, perícia e escrita." },
-      { property: "og:title", content: "Atuação — Erichson Bunder" },
+      { property: "og:title", content: "Atuação — Erikson Wander" },
     ],
   }),
   component: AtuacaoPage,

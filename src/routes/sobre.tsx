@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
-import portrait from "@/assets/erichson-portrait.jpg";
+import portrait from "@/assets/EriksonSobre.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre — Erichson Bunder" },
-      { name: "description", content: "Trajetória, formação e princípios de Erichson Bunder, psicólogo, escritor e mentor." },
-      { property: "og:title", content: "Sobre — Erichson Bunder" },
-      { property: "og:image", content: "/og.jpg" },
+      { title: "Sobre — Erikson Wander" },
+      { name: "description", content: "Trajetória, formação e princípios de Erikson Wander, psicólogo, escritor e mentor." },
+      { property: "og:title", content: "Sobre — Erikson Wander" },
+      { property: "og:image", content: "/og.png" },
     ],
   }),
   component: SobrePage,
@@ -32,7 +32,7 @@ function SobrePage() {
             <Reveal>
               <img
                 src={portrait}
-                alt="Erichson Bunder"
+                alt="Erikson Wander"
                 width={1024}
                 height={1280}
                 loading="lazy"
@@ -52,19 +52,23 @@ function SobrePage() {
             <Reveal delay={0.2}>
               <div className="mt-8 space-y-5 text-ink/80 leading-relaxed">
                 <p>
-                  Sou Erichson Bunder, psicólogo clínico há mais de uma década. Minha
-                  prática se construiu no encontro entre a clínica, o ensino e a escrita —
-                  três caminhos que se sustentam mutuamente.
+                  Erikson Wander de Oliveira da Silva é um cristão dedicado e um profissional altamente 
+                  qualificado no campo da psicologia e teologia. Com 40 anos de idade, Erikson possui uma 
+                  sólida formação acadêmica que inclui um bacharelado em teologia e psicologia. 
+                  Além disso, ele é pós-graduado em Terapia Cognitivo-Comportamental (TCC), Geriatria 
+                  e Gerontologia, e Neuropsicologia. 
                 </p>
                 <p>
-                  Atuo no atendimento individual, na supervisão de profissionais em
-                  formação, em projetos de mentoria, na docência e em pareceres
-                  periciais. Em todas essas frentes, busco o mesmo: rigor metodológico
-                  unido à hospitalidade do encontro.
+                  Ao longo de mais de sete anos, Erikson tem atuado como psicólogo clínico, oferecendo 
+                  atendimento especializado em psicologia clínica, avaliação psicológica e avaliação neuropsicológica. 
+                  Sua experiência e dedicação o tornaram um profissional respeitado na área, ajudando inúmeros pacientes 
+                  a encontrar caminhos para a cura e o bem-estar. 
                 </p>
                 <p>
-                  Acredito que a psicologia, quando bem feita, é uma forma silenciosa
-                  de devolver às pessoas o direito à própria palavra.
+                  Combinando sua fé cristã com sua expertise em psicologia, Erikson aborda a saúde mental de uma perspectiva 
+                  holística, integrando princípios espirituais e científicos para oferecer um suporte completo aos seus pacientes. 
+                  Sua paixão por ajudar os outros e seu compromisso com o desenvolvimento contínuo em sua área de atuação são evidentes 
+                  em seu trabalho diário.
                 </p>
               </div>
             </Reveal>

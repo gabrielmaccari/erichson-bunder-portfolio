@@ -2,13 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 import { BookOpen } from "lucide-react";
+import Book1 from "@/assets/DepressaoNaVidaCrista.jpeg";
+import Book2 from "@/assets/DesperteSuaMelhorVersao.jpeg"
+import portrait from "@/assets/Erikson-portrait.png";
 
 export const Route = createFileRoute("/escritor")({
   head: () => ({
     meta: [
-      { title: "Escritor — Erichson Bunder" },
-      { name: "description", content: "Livros, ensaios e textos de Erichson Bunder sobre clínica, subjetividade e o ofício de cuidar." },
-      { property: "og:title", content: "Escritor — Erichson Bunder" },
+      { title: "Escritor — Erikson Wander" },
+      { name: "description", content: "Livros, ensaios e textos de Erikson Wander sobre clínica, subjetividade e o ofício de cuidar." },
+      { property: "og:title", content: "Escritor — Erikson Wander" },
     ],
   }),
   component: EscritorPage,
@@ -17,22 +20,17 @@ export const Route = createFileRoute("/escritor")({
 const works = [
   {
     year: "2024",
-    title: "A escuta como morada",
-    type: "Livro",
-    desc: "Reflexões sobre o lugar do silêncio na clínica psicológica e o trabalho de hospedar a fala do outro.",
+    title: "Depressão na Vida Cristã",
+    img: Book1,
+    desc: "Aborda a depressão no contexto da vida cristã, integrando perspectivas psicológicas e teológicas. O livro define a depressão, explora teorias de Freud, Jung, Beck e Seligman, e oferece ferramentas práticas para a gestão do transtorno. A dimensão espiritual é destacada, com análise de passagens bíblicas e histórias de figuras bíblicas que enfrentaram angústia, mostrando que a depressão é parte da condição humana. O livro oferece encorajamento e suporte para cristãos enfrentando a depressão, unindo psicologia e fé para promover esperança e cura.",
   },
   {
     year: "2022",
-    title: "Pequenas travessias",
-    type: "Ensaios",
-    desc: "Coletânea de ensaios sobre transições, lutos e os movimentos invisíveis da vida psíquica.",
+    title: "Desperte Sua Melhor Versão",
+    img: Book2,
+    desc: "Cada indivíduo possui um potencial extraordinário à espera de ser desvendado, no livro você vai encontrar ferramentas, que não apenas informam, mas também motivam à ação.Desperte sua melhor versão é um livro que conduz os leitores na descoberta de suas paixões, no estabelecimento de metas realistas e na adoção de hábitos transformadores. Adquira aqui seu livro e mostre para o mundo sua melhor versão.",
   },
-  {
-    year: "2020",
-    title: "O ofício de cuidar",
-    type: "Livro",
-    desc: "Notas sobre formação, ética e a construção de uma clínica autoral em tempos acelerados.",
-  },
+  
 ];
 
 function EscritorPage() {
@@ -67,9 +65,17 @@ function EscritorPage() {
                   <span className="font-display text-xl text-ink">{w.year}</span>
                 </div>
                 <div className="md:col-span-3">
-                  <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    {w.type}
-                  </span>
+                  {w.img ? (
+                    <img
+                      src={w.img}
+                      alt={w.title}
+                      className="h-100 w-100 rounded-md object-cover"
+                    />
+                  ) : (
+                    <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                      Livro
+                    </span>
+                  )}
                 </div>
                 <div className="md:col-span-7">
                   <h2 className="font-display text-2xl md:text-3xl text-ink group-hover:text-ink/90">

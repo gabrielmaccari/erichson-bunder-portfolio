@@ -1,76 +1,251 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
-import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import {
+  Brain,
+  Heart,
+  Target,
+  Flame,
+  Lightbulb,
+  TrendingUp,
+  CheckCircle2,
+  Star,
+  Gift,
+  Shield,
+  Zap,
+  MessageCircle,
+  Sparkles,
+} from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Erikson Wander" },
-      { name: "description", content: "Entre em contato para atendimento clínico, mentoria, formação ou perícia." },
-      { property: "og:title", content: "Contato — Erikson Wander" },
+      { title: "Imersão Desperte Sua Melhor Versão — Erikson Wander" },
+      {
+        name: "description",
+        content:
+          "Imersão de transformação pessoal com o psicólogo Erikson Wander. Clareza, propósito e autoconfiança.",
+      },
+      { property: "og:title", content: "Imersão Desperte Sua Melhor Versão" },
     ],
   }),
   component: ContatoPage,
 });
 
+const identificacoes = [
+  "Sente que sua vida está no piloto automático",
+  "Tem dificuldade em tomar decisões importantes",
+  "Se sente perdido(a) sem saber qual é seu propósito",
+  "Carrega medos e crenças que te limitam",
+  "Sabe que pode mais, mas não sabe por onde começar",
+  "Busca mais paz interior e autoconfiança",
+];
+
+const conquistas = [
+  { icon: Brain, label: "Clareza mental e autoconhecimento profundo" },
+  { icon: Heart, label: "Cura emocional e libertação de bloqueios" },
+  { icon: Target, label: "Definição clara dos seus objetivos de vida" },
+  { icon: Flame, label: "Despertar da sua energia interior" },
+  { icon: Lightbulb, label: "Técnicas práticas de transformação pessoal" },
+  { icon: TrendingUp, label: "Plano de ação para sua evolução contínua" },
+];
+
+const incluso = [
+  "Conteúdo exclusivo e transformador",
+  "Exercícios práticos de autoconhecimento",
+  "Meditações guiadas poderosas",
+  "Material de apoio completo",
+  "Acesso vitalício ao conteúdo",
+  "Suporte via WhatsApp",
+];
+
+const depoimentos = [
+  {
+    nome: "Maria Silva",
+    texto:
+      "Essa imersão mudou completamente minha vida! Finalmente encontrei meu propósito e tenho clareza do que quero.",
+  },
+  {
+    nome: "Carlos Santos",
+    texto:
+      "Nunca imaginei que em tão pouco tempo eu conseguiria me libertar de crenças que me limitavam há anos.",
+  },
+  {
+    nome: "Ana Oliveira",
+    texto:
+      "A melhor decisão que tomei! Hoje vivo uma vida mais leve, com mais amor próprio e autoconfiança.",
+  },
+];
+
+function Pill({ icon: Icon, children }: { icon: React.ElementType; children: React.ReactNode }) {
+  return (
+    <div className="inline-flex items-center gap-2 rounded-full bg-secondary/70 border border-border px-5 py-2 text-sm text-ink">
+      <Icon size={16} className="text-gold" />
+      <span className="font-medium">{children}</span>
+    </div>
+  );
+}
+
 function ContatoPage() {
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSent(true);
-  };
-
   return (
     <SiteLayout>
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-12 gap-16">
-          <div className="md:col-span-5">
-            <Reveal>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Contato</p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h1 className="mt-4 font-display text-4xl md:text-6xl text-ink text-balance">
-                Vamos <span className="italic">conversar.</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-6 text-ink/70 leading-relaxed">
-                Para agendar uma sessão, propor uma formação ou pedir um parecer
-                técnico — escreva. Respondo pessoalmente, em até dois dias úteis.
-              </p>
-            </Reveal>
+      {/* Identificação */}
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <h2 className="text-center font-display text-4xl md:text-5xl text-ink">
+              Você se identifica com isso?
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid md:grid-cols-2 gap-5">
+            {identificacoes.map((t, i) => (
+              <Reveal key={t} delay={i * 0.05}>
+                <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-6 hover:border-gold/60 transition-colors">
+                  <span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-gold shrink-0" />
+                  <p className="text-ink/85 leading-relaxed">{t}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="md:col-span-7">
-          <Reveal delay={0.3}>
-              <div className="mt-12 space-y-5">
-                <div className="flex items-start gap-4">
-                  <Mail size={18} className="mt-1 text-gold" />
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</p>
-                    <p className="text-ink">eriksonwander.psi@gmail.com</p>
+      {/* O que vai conquistar */}
+      <section className="py-20 md:py-28 bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <h2 className="text-center font-display text-4xl md:text-5xl text-ink">
+              O que você vai conquistar
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-4 text-center text-ink/70 max-w-2xl mx-auto">
+              Ao final dessa imersão, você terá uma nova visão de si mesmo e da sua vida.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {conquistas.map(({ icon: Icon, label }, i) => (
+              <Reveal key={label} delay={i * 0.05}>
+                <div className="h-full rounded-xl border border-border bg-card p-7 hover:shadow-lg hover:-translate-y-1 transition-all">
+                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-gold/15 text-gold">
+                    <Icon size={22} />
                   </div>
+                  <p className="mt-5 text-ink leading-relaxed">{label}</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <Phone size={18} className="mt-1 text-gold" />
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">WhatsApp</p>
-                    <p className="text-ink">+55 (00) 00000-0000</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* O que está incluso */}
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <Reveal>
+            <div className="flex justify-center">
+              <Pill icon={Gift}>O que está incluso</Pill>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="mt-6 text-center font-display text-4xl md:text-5xl text-ink text-balance">
+              Tudo que você precisa para transformar sua vida
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-x-10 gap-y-5">
+                {incluso.map((item) => (
+                  <div key={item} className="flex items-center gap-4">
+                    <CheckCircle2 size={22} className="text-gold shrink-0" />
+                    <span className="text-ink">{item}</span>
                   </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Depoimentos */}
+      <section className="py-20 md:py-28 bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <div className="flex justify-center">
+              <Pill icon={Heart}>Depoimentos</Pill>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="mt-6 text-center font-display text-4xl md:text-5xl text-ink">
+              Vidas transformadas
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {depoimentos.map((d, i) => (
+              <Reveal key={d.nome} delay={i * 0.08}>
+                <div className="h-full rounded-xl border border-border bg-card p-7">
+                  <div className="flex gap-1 text-gold">
+                    {Array.from({ length: 5 }).map((_, k) => (
+                      <Star key={k} size={16} fill="currentColor" />
+                    ))}
+                  </div>
+                  <p className="mt-5 text-ink/85 italic leading-relaxed">"{d.texto}"</p>
+                  <p className="mt-6 font-medium text-gold">{d.nome}</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <MapPin size={18} className="mt-1 text-gold" />
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Atendimento</p>
-                    <p className="text-ink">Presencial e online</p>
-                  </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Oferta */}
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-6">
+          <Reveal>
+            <div className="relative rounded-3xl gradient-ink text-cream p-10 md:p-14 shadow-2xl overflow-hidden">
+              <div className="absolute top-5 right-5">
+                <span className="inline-flex items-center gap-1.5 rounded-md bg-gold text-ink px-3 py-1.5 text-xs font-bold tracking-wider">
+                  <Sparkles size={12} /> OFERTA ESPECIAL
+                </span>
+              </div>
+
+              <h2 className="font-display text-3xl md:text-4xl text-center text-cream text-balance">
+                Imersão Desperte Sua Melhor Versão
+              </h2>
+
+              <p className="mt-8 text-center text-cream/70 line-through">De R$ 497,00</p>
+              <p className="mt-2 text-center text-cream/80">por apenas</p>
+
+              <div className="mt-4 flex items-end justify-center gap-1">
+                <span className="font-display text-7xl md:text-8xl text-gold leading-none">
+                  R$ 197
+                </span>
+                <span className="text-gold text-2xl mb-3">,00</span>
+              </div>
+
+              <p className="mt-4 text-center text-cream/80">
+                ou em até <span className="text-gold font-medium">12x de R$ 19,67</span>
+              </p>
+
+              <a
+                href="https://wa.me/5532991057806"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 flex items-center justify-center gap-3 rounded-xl bg-gold hover:bg-gold/90 text-ink font-bold px-6 py-5 text-lg tracking-wide transition-all hover:shadow-xl"
+              >
+                <MessageCircle size={22} />
+                GARANTIR MINHA VAGA AGORA
+              </a>
+
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-cream/80">
+                <div className="flex items-center gap-2">
+                  <Shield size={16} className="text-gold" /> Garantia de 7 dias
+                </div>
+                <div className="flex items-center gap-2">
+                  <Zap size={16} className="text-gold" /> Acesso imediato
                 </div>
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
     </SiteLayout>

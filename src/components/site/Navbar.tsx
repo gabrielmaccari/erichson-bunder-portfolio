@@ -8,7 +8,7 @@ const links = [
   { to: "/sobre", label: "Sobre" },
   { to: "/atuacao", label: "Atuação" },
   { to: "/escritor", label: "Livros" },
-  { to: "/contato", label: "Contato" },
+  { to: "/imersao", label: "Imersão" },
 ] as const;
 
 export function Navbar() {
@@ -38,7 +38,7 @@ export function Navbar() {
             className="h-12 w-12 md:h-14 md:w-14 rounded-md object-cover"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-xl tracking-tight text-ink">Dr. Erikson</span>
+            <span className="font-display text-xl tracking-tight text-ink">Erikson</span>
             <span className="font-display italic text-sm text-muted-foreground">Wander</span>
           </div>
         </Link>

@@ -10,8 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as ImersaoRouteImport } from './routes/imersao'
 import { Route as EscritorRouteImport } from './routes/escritor'
-import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as AtuacaoRouteImport } from './routes/atuacao'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -20,14 +20,14 @@ const SobreRoute = SobreRouteImport.update({
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImersaoRoute = ImersaoRouteImport.update({
+  id: '/imersao',
+  path: '/imersao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EscritorRoute = EscritorRouteImport.update({
   id: '/escritor',
   path: '/escritor',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AtuacaoRoute = AtuacaoRouteImport.update({
@@ -44,38 +44,38 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/atuacao': typeof AtuacaoRoute
-  '/contato': typeof ContatoRoute
   '/escritor': typeof EscritorRoute
+  '/imersao': typeof ImersaoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/atuacao': typeof AtuacaoRoute
-  '/contato': typeof ContatoRoute
   '/escritor': typeof EscritorRoute
+  '/imersao': typeof ImersaoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/atuacao': typeof AtuacaoRoute
-  '/contato': typeof ContatoRoute
   '/escritor': typeof EscritorRoute
+  '/imersao': typeof ImersaoRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
+  fullPaths: '/' | '/atuacao' | '/escritor' | '/imersao' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
-  id: '__root__' | '/' | '/atuacao' | '/contato' | '/escritor' | '/sobre'
+  to: '/' | '/atuacao' | '/escritor' | '/imersao' | '/sobre'
+  id: '__root__' | '/' | '/atuacao' | '/escritor' | '/imersao' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AtuacaoRoute: typeof AtuacaoRoute
-  ContatoRoute: typeof ContatoRoute
   EscritorRoute: typeof EscritorRoute
+  ImersaoRoute: typeof ImersaoRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -88,18 +88,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/imersao': {
+      id: '/imersao'
+      path: '/imersao'
+      fullPath: '/imersao'
+      preLoaderRoute: typeof ImersaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/escritor': {
       id: '/escritor'
       path: '/escritor'
       fullPath: '/escritor'
       preLoaderRoute: typeof EscritorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/atuacao': {
@@ -122,8 +122,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AtuacaoRoute: AtuacaoRoute,
-  ContatoRoute: ContatoRoute,
   EscritorRoute: EscritorRoute,
+  ImersaoRoute: ImersaoRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport

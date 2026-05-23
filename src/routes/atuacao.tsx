@@ -87,7 +87,7 @@ function AtuacaoPage() {
 
         <div className="mt-16 text-center">
           <Link
-            to="/contato"
+            to="/imersao"
             className="inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full text-sm hover:bg-ink/90 transition-colors"
           >
             Falar sobre meu caso <ArrowRight size={16} />

@@ -17,7 +17,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export const Route = createFileRoute("/contato")({
+export const Route = createFileRoute("/imersao")({
   head: () => ({
     meta: [
       { title: "Imersão Desperte Sua Melhor Versão — Erikson Wander" },

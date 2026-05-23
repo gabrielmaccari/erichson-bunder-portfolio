@@ -77,7 +77,7 @@ function Index() {
               className="mt-10 flex flex-wrap items-center gap-5"
             >
               <Link
-                to="/contato"
+                to="/imersao"
                 className="group inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full text-sm tracking-wide hover:bg-ink/90 transition-all"
               >
                 Agendar uma conversa
@@ -202,7 +202,7 @@ function Index() {
                 Atendimento presencial e online, supervisão clínica e formações sob medida.
               </p>
               <Link
-                to="/contato"
+                to="/imersao"
                 className="mt-8 inline-flex items-center gap-2 bg-cream text-ink px-7 py-3.5 rounded-full text-sm hover:bg-gold transition-colors"
               >
                 Entrar em contato <ArrowRight size={16} />

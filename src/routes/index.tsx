@@ -92,9 +92,9 @@ function Index() {
               transition={{ duration: 0.9, delay: 0.25 }}
               className="mt-6 max-w-xl text-lg text-ink/70 text-pretty"
             >
-              Psicólogo clínico, escritor, mentor, professor e perito. Há mais de uma
-              década dedicado à escuta, ao estudo e à formação de profissionais
-              comprometidos com o humano.
+              Neuropsicólogo, psicólogo clínico, escritor, mentor, professor e perito.
+              Há mais de uma década dedicado à avaliação neuropsicológica, à escuta clínica
+              e à formação de profissionais comprometidos com o humano.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -128,7 +128,7 @@ function Index() {
               alt="Retrato de Erikson Wander"
               width={1024}
               height={1280}
-              className="relative rounded-[2rem] object-cover w-full aspect-[4/5] shadow-2xl shadow-ink/20"
+              className="relative rounded-[2rem] object-cover object-top w-full aspect-[4/5] shadow-2xl shadow-ink/20"
             />
             <div className="absolute -bottom-6 -left-6 bg-cream border border-border rounded-2xl px-5 py-4 shadow-lg shadow-ink/5">
               <p className="font-display italic text-ink text-sm">"A escuta é o início da clínica."</p>

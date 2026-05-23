@@ -201,9 +201,11 @@ function ContatoPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
-            <div className="relative rounded-3xl gradient-ink text-cream p-10 md:p-14 shadow-2xl overflow-hidden">
+            <div className="relative rounded-3xl bg-ink text-cream p-10 md:p-14 shadow-2xl overflow-hidden border border-sand/20">
+              <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sand/15 blur-3xl" />
+              <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
               <div className="absolute top-5 right-5">
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-gold text-ink px-3 py-1.5 text-xs font-bold tracking-wider">
+                <span className="inline-flex items-center gap-1.5 rounded-md bg-cream text-ink px-3 py-1.5 text-xs font-bold tracking-wider shadow-md">
                   <Sparkles size={12} /> OFERTA ESPECIAL
                 </span>
               </div>
@@ -212,36 +214,36 @@ function ContatoPage() {
                 Imersão Desperte Sua Melhor Versão
               </h2>
 
-              <p className="mt-8 text-center text-cream/70 line-through">De R$ 497,00</p>
-              <p className="mt-2 text-center text-cream/80">por apenas</p>
+              <p className="mt-8 text-center text-sand line-through">De R$ 497,00</p>
+              <p className="mt-2 text-center text-cream">por apenas</p>
 
               <div className="mt-4 flex items-end justify-center gap-1">
-                <span className="font-display text-7xl md:text-8xl text-gold leading-none">
+                <span className="font-display text-7xl md:text-8xl text-cream leading-none drop-shadow-lg">
                   R$ 197
                 </span>
-                <span className="text-gold text-2xl mb-3">,00</span>
+                <span className="text-cream text-2xl mb-3">,00</span>
               </div>
 
-              <p className="mt-4 text-center text-cream/80">
-                ou em até <span className="text-gold font-medium">12x de R$ 19,67</span>
+              <p className="mt-4 text-center text-cream/90">
+                ou em até <span className="text-sand font-semibold">12x de R$ 19,67</span>
               </p>
 
               <a
                 href="https://wa.me/5532991057806"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 flex items-center justify-center gap-3 rounded-xl bg-gold hover:bg-gold/90 text-ink font-bold px-6 py-5 text-lg tracking-wide transition-all hover:shadow-xl"
+                className="relative mt-10 flex items-center justify-center gap-3 rounded-xl bg-cream hover:bg-sand text-ink font-bold px-6 py-5 text-lg tracking-wide transition-all hover:shadow-2xl hover:-translate-y-0.5"
               >
                 <MessageCircle size={22} />
                 GARANTIR MINHA VAGA AGORA
               </a>
 
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-cream/80">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-cream">
                 <div className="flex items-center gap-2">
-                  <Shield size={16} className="text-gold" /> Garantia de 7 dias
+                  <Shield size={16} className="text-sand" /> Garantia de 7 dias
                 </div>
                 <div className="flex items-center gap-2">
-                  <Zap size={16} className="text-gold" /> Acesso imediato
+                  <Zap size={16} className="text-sand" /> Acesso imediato
                 </div>
               </div>
             </div>

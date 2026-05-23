@@ -25,11 +25,37 @@ export const Route = createFileRoute("/")({
 });
 
 const facets = [
-  { icon: Brain, title: "Psicólogo", text: "Atendimento clínico humanizado, com base sólida e escuta cuidadosa." },
-  { icon: BookOpen, title: "Escritor", text: "Livros e ensaios sobre subjetividade, vínculo e o ofício de cuidar." },
-  { icon: Compass, title: "Mentor", text: "Acompanhamento de profissionais e estudantes em formação contínua." },
-  { icon: GraduationCap, title: "Professor", text: "Cursos, palestras e formações em psicologia clínica e ética." },
-  { icon: Scale, title: "Perito", text: "Pareceres técnicos e atuação pericial com rigor metodológico." },
+  {
+    icon: Brain,
+    title: "Neuropsicólogo",
+    text:
+      "Avaliação neuropsicológica completa: memória, atenção, funções executivas e linguagem, com laudos detalhados que orientam diagnóstico e tratamento.",
+  },
+  {
+    icon: Compass,
+    title: "Psicólogo Clínico",
+    text: "Atendimento humanizado e baseado em evidências, com escuta cuidadosa e plano terapêutico individualizado.",
+  },
+  {
+    icon: BookOpen,
+    title: "Escritor",
+    text: "Livros e ensaios sobre cérebro, subjetividade e o ofício de cuidar.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Professor",
+    text: "Cursos, palestras e formações em neuropsicologia, psicologia clínica e ética profissional.",
+  },
+  {
+    icon: Scale,
+    title: "Perito",
+    text: "Pareceres técnicos e perícias neuropsicológicas com rigor metodológico e linguagem acessível.",
+  },
+  {
+    icon: Compass,
+    title: "Mentor",
+    text: "Acompanho profissionais e estudantes em sua formação contínua e prática clínica.",
+  },
 ];
 
 function Index() {
@@ -49,7 +75,7 @@ function Index() {
               transition={{ duration: 0.6 }}
               className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
             >
-              Erikson Wander · CRP: 04/57656
+              Erikson Wander · CRP: 04/57656 · Neuropsicólogo
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
@@ -66,9 +92,9 @@ function Index() {
               transition={{ duration: 0.9, delay: 0.25 }}
               className="mt-6 max-w-xl text-lg text-ink/70 text-pretty"
             >
-              Psicólogo clínico, escritor, mentor, professor e perito. Há mais de uma
-              década dedicado à escuta, ao estudo e à formação de profissionais
-              comprometidos com o humano.
+              Neuropsicólogo, psicólogo clínico, escritor, mentor, professor e perito.
+              Há mais de uma década dedicado à avaliação neuropsicológica, à escuta clínica
+              e à formação de profissionais comprometidos com o humano.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -102,7 +128,7 @@ function Index() {
               alt="Retrato de Erikson Wander"
               width={1024}
               height={1280}
-              className="relative rounded-[2rem] object-cover w-full aspect-[4/5] shadow-2xl shadow-ink/20"
+              className="relative rounded-[2rem] object-cover object-top w-full aspect-[4/5] shadow-2xl shadow-ink/20"
             />
             <div className="absolute -bottom-6 -left-6 bg-cream border border-border rounded-2xl px-5 py-4 shadow-lg shadow-ink/5">
               <p className="font-display italic text-ink text-sm">"A escuta é o início da clínica."</p>
@@ -115,16 +141,16 @@ function Index() {
       <section className="py-24 md:py-32 bg-ink text-cream">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.3em] text-cream/50">Manifesto</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-sand">Manifesto</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 font-display text-3xl md:text-5xl leading-tight text-balance">
+            <h2 className="mt-6 font-display text-3xl md:text-5xl leading-tight text-balance text-cream">
               Não tratamos sintomas isolados.{" "}
-              <span className="italic text-cream/70">Acompanhamos pessoas.</span>
+              <span className="italic text-sand">Acompanhamos pessoas.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-8 text-cream/70 text-lg leading-relaxed text-pretty">
+            <p className="mt-8 text-cream/90 text-lg leading-relaxed text-pretty">
               Acredito que o trabalho clínico se constrói na delicadeza do encontro:
               tempo, presença, rigor teórico e disposição genuína para o outro. É a
               partir desse cruzamento que nascem mudanças reais e duradouras.

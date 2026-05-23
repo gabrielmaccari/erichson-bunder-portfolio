@@ -36,7 +36,7 @@ function SobrePage() {
                 width={1024}
                 height={1280}
                 loading="lazy"
-                className="w-full aspect-[4/5] object-cover rounded-3xl shadow-xl shadow-ink/10"
+                className="w-full aspect-[4/5] object-cover object-top rounded-3xl shadow-xl shadow-ink/10"
               />
             </Reveal>
           </div>

@@ -75,14 +75,6 @@ function Index() {
               transition={{ duration: 0.6 }}
               className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
             >
-              Erikson Wander · CRP: 04/57656
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
-            >
               Erikson Wander · CRP: 04/57656 · Neuropsicólogo
             </motion.p>
             <motion.h1

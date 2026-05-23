@@ -25,11 +25,37 @@ export const Route = createFileRoute("/")({
 });
 
 const facets = [
-  { icon: Brain, title: "Psicólogo", text: "Atendimento clínico humanizado, com base sólida e escuta cuidadosa." },
-  { icon: BookOpen, title: "Escritor", text: "Livros e ensaios sobre subjetividade, vínculo e o ofício de cuidar." },
-  { icon: Compass, title: "Mentor", text: "Acompanhamento de profissionais e estudantes em formação contínua." },
-  { icon: GraduationCap, title: "Professor", text: "Cursos, palestras e formações em psicologia clínica e ética." },
-  { icon: Scale, title: "Perito", text: "Pareceres técnicos e atuação pericial com rigor metodológico." },
+  {
+    icon: Brain,
+    title: "Neuropsicólogo",
+    text:
+      "Avaliação neuropsicológica completa: memória, atenção, funções executivas e linguagem, com laudos detalhados que orientam diagnóstico e tratamento.",
+  },
+  {
+    icon: Compass,
+    title: "Psicólogo Clínico",
+    text: "Atendimento humanizado e baseado em evidências, com escuta cuidadosa e plano terapêutico individualizado.",
+  },
+  {
+    icon: BookOpen,
+    title: "Escritor",
+    text: "Livros e ensaios sobre cérebro, subjetividade e o ofício de cuidar.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Professor",
+    text: "Cursos, palestras e formações em neuropsicologia, psicologia clínica e ética profissional.",
+  },
+  {
+    icon: Scale,
+    title: "Perito",
+    text: "Pareceres técnicos e perícias neuropsicológicas com rigor metodológico e linguagem acessível.",
+  },
+  {
+    icon: Compass,
+    title: "Mentor",
+    text: "Acompanho profissionais e estudantes em sua formação contínua e prática clínica.",
+  },
 ];
 
 function Index() {
@@ -50,6 +76,14 @@ function Index() {
               className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
             >
               Erikson Wander · CRP: 04/57656
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xs uppercase tracking-[0.3em] text-muted-foreground"
+            >
+              Erikson Wander · CRP: 04/57656 · Neuropsicólogo
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}

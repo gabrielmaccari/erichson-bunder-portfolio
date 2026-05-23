@@ -141,16 +141,16 @@ function Index() {
       <section className="py-24 md:py-32 bg-ink text-cream">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.3em] text-cream/50">Manifesto</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-sand">Manifesto</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 font-display text-3xl md:text-5xl leading-tight text-balance">
+            <h2 className="mt-6 font-display text-3xl md:text-5xl leading-tight text-balance text-cream">
               Não tratamos sintomas isolados.{" "}
-              <span className="italic text-cream/70">Acompanhamos pessoas.</span>
+              <span className="italic text-sand">Acompanhamos pessoas.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-8 text-cream/70 text-lg leading-relaxed text-pretty">
+            <p className="mt-8 text-cream/90 text-lg leading-relaxed text-pretty">
               Acredito que o trabalho clínico se constrói na delicadeza do encontro:
               tempo, presença, rigor teórico e disposição genuína para o outro. É a
               partir desse cruzamento que nascem mudanças reais e duradouras.

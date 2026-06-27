@@ -8,8 +8,9 @@ const links = [
   { to: "/sobre", label: "Sobre" },
   { to: "/atuacao", label: "Atuação" },
   { to: "/escritor", label: "Livros" },
-  { to: "/imersao", label: "Imersão" },
 ] as const;
+
+const ctaLink = { to: "/imersao", label: "Imersão" };
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

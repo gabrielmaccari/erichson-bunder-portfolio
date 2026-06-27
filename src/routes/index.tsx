@@ -106,7 +106,7 @@ function Index() {
                 to="/imersao"
                 className="group inline-flex items-center gap-2 bg-ink text-cream px-7 py-3.5 rounded-full text-sm tracking-wide hover:bg-ink/90 transition-all"
               >
-                Agendar uma conversa
+                Quero fazer a Imersão
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link to="/sobre" className="text-sm text-ink link-underline">
@@ -186,7 +186,7 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-6 text-center">
             <Link to="/atuacao" className="inline-flex items-center gap-2 text-sm text-ink link-underline">
               Ver todos os serviços <ArrowRight size={14} />
             </Link>

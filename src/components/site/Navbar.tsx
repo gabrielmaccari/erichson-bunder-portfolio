@@ -8,8 +8,9 @@ const links = [
   { to: "/sobre", label: "Sobre" },
   { to: "/atuacao", label: "Atuação" },
   { to: "/escritor", label: "Livros" },
-  { to: "/imersao", label: "Imersão" },
 ] as const;
+
+const ctaLink = { to: "/imersao", label: "Imersão" };
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -55,6 +56,13 @@ export function Navbar() {
               {l.label}
             </Link>
           ))}
+          <Link
+            to={ctaLink.to}
+            className="text-sm tracking-wide text-cream bg-gold hover:bg-gold/90 px-4 py-1.5 rounded-full font-semibold transition-colors"
+            activeProps={{ className: "text-cream bg-ink px-4 py-1.5 rounded-full font-semibold" }}
+          >
+            {ctaLink.label}
+          </Link>
         </nav>
 
         <button
@@ -81,6 +89,14 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              to={ctaLink.to}
+              onClick={() => setOpen(false)}
+              className="text-base text-cream bg-gold hover:bg-gold/90 px-4 py-2 rounded-full font-semibold text-center transition-colors"
+              activeProps={{ className: "text-cream bg-ink px-4 py-2 rounded-full font-semibold" }}
+            >
+              {ctaLink.label}
+            </Link>
           </nav>
         </div>
       )}

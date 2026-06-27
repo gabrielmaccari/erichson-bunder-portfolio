@@ -56,6 +56,13 @@ export function Navbar() {
               {l.label}
             </Link>
           ))}
+          <Link
+            to={ctaLink.to}
+            className="text-sm tracking-wide text-cream bg-gold hover:bg-gold/90 px-4 py-1.5 rounded-full font-semibold transition-colors"
+            activeProps={{ className: "text-cream bg-ink px-4 py-1.5 rounded-full font-semibold" }}
+          >
+            {ctaLink.label}
+          </Link>
         </nav>
 
         <button

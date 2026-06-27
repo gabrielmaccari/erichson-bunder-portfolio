@@ -229,7 +229,7 @@ function ContatoPage() {
               </p>
 
               <a
-                href="https://wa.me/553291057806?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%2C%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20sua%20imers%C3%A0!"
+                href="https://wa.me/5532991057806?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%2C%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20sua%20imers%C3%A3o!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative mt-10 flex items-center justify-center gap-3 rounded-xl bg-cream hover:bg-sand text-ink font-bold px-6 py-5 text-lg tracking-wide transition-all hover:shadow-2xl hover:-translate-y-0.5"

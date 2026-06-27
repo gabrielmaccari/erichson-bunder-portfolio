@@ -237,6 +237,9 @@ function ContatoPage() {
                 <MessageCircle size={22} />
                 GARANTIR MINHA VAGA AGORA
               </a>
+              <p className="mt-3 text-center text-sm text-cream/70">
+                Ou envie uma mensagem para <span className="text-sand font-medium">(32) 99105-7806</span>
+              </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-cream">
                 <div className="flex items-center gap-2">

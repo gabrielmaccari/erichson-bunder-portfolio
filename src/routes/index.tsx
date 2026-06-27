@@ -186,7 +186,7 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-6 text-center">
             <Link to="/atuacao" className="inline-flex items-center gap-2 text-sm text-ink link-underline">
               Ver todos os serviços <ArrowRight size={14} />
             </Link>

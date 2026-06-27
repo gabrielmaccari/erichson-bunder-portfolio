@@ -76,36 +76,6 @@ function SobrePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-secondary/40">
-        <div className="mx-auto max-w-5xl px-6">
-          <Reveal>
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Trajetória</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="mt-4 font-display text-3xl md:text-5xl text-ink">Marcos da formação</h2>
-          </Reveal>
-
-          <div className="mt-16 relative">
-            <div className="absolute left-[88px] md:left-[120px] top-0 bottom-0 w-px bg-border" />
-            <div className="space-y-12">
-              {milestones.map((m, i) => (
-                <Reveal key={m.year} delay={i * 0.06}>
-                  <div className="flex gap-8 md:gap-12 items-start">
-                    <div className="w-20 md:w-28 shrink-0 text-right">
-                      <span className="font-display text-2xl text-gold">{m.year}</span>
-                    </div>
-                    <div className="relative">
-                      <span className="absolute -left-[27px] md:-left-[35px] top-2 h-3 w-3 rounded-full bg-ink ring-4 ring-cream" />
-                      <h3 className="font-display text-xl text-ink">{m.title}</h3>
-                      <p className="mt-2 text-ink/70">{m.desc}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </SiteLayout>
   );
 }

@@ -186,9 +186,9 @@ function Index() {
             ))}
           </div>
 
-          <div className="mt-6 text-center">
-            <Link to="/atuacao" className="inline-flex items-center gap-2 text-sm text-ink link-underline">
-              Ver todos os serviços <ArrowRight size={14} />
+          <div className="mt-6 flex justify-center">
+            <Link to="/atuacao" className="inline-flex items-center gap-2 text-sm text-ink link-underline whitespace-nowrap">
+              Ver todos os serviços <ArrowRight size={14} className="shrink-0" />
             </Link>
           </div>
         </div>
@@ -226,6 +226,7 @@ function Index() {
               </h3>
               <p className="mt-6 max-w-xl text-cream/70">
                 Atendimento presencial e online, supervisão clínica e formações sob medida.
+                Participe também da <strong>Imersão Desperte Sua Melhor Versão</strong> — um programa de transformação pessoal com clareza, propósito e autoconfiança.
               </p>
               <Link
                 to="/imersao"
